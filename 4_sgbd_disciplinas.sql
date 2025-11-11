@@ -1,0 +1,9 @@
+USE sgbd_system;
+
+DROP TABLE IF EXISTS disciplinas;
+
+CREATE TABLE disciplinas (
+    id INT(11) UNSIGNED AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+);
