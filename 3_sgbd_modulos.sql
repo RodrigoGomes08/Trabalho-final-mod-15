@@ -7,4 +7,6 @@ CREATE TABLE modulos (
     nome VARCHAR(255) NOT NULL,
     ano_lecionacao VARCHAR(3) NOT NULL,
     PRIMARY KEY (id)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT
 ); 

@@ -7,4 +7,6 @@ CREATE TABLE cursos (
     slug VARCHAR(10) NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (id_instituicao) REFERENCES instituicao(id)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT
 );
