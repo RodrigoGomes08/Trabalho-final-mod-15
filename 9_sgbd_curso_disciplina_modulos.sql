@@ -10,8 +10,11 @@ CREATE TABLE curso_disciplina_modulos (
     n_hora_dadas DECIMAL(4,2) NOT NULL,
     n_ordem BIT NOT NULL,
     PRIMARY KEY (id),
+    CONSTRAINT unique_id_curso_id_disciplina_id_modulo UNIQUE (id_curso, id_disciplina, id_modulo),
     FOREIGN KEY (id_curso) REFERENCES cursos(id),
     FOREIGN KEY (id_disciplina) REFERENCES disciplinas(id),
     FOREIGN KEY (id_modulo) REFERENCES modulos(id),
     FOREIGN KEY (id_precedencia) REFERENCES disciplinas(id)
+    ON DELETE CASCADE
+    ON UPDATE RESTRICT
 );

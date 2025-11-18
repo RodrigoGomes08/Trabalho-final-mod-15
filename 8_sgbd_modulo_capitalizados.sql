@@ -7,6 +7,7 @@ CREATE TABLE modulo_capitalizados (
     data_capitalizacao DATE NOT NULL,
     nota BIT NOT NULL,
     PRIMARY KEY (id),
+    CONSTRAINT unique_id_modulo_id_aluno UNIQUE (id_modulo, id_aluno),
     FOREIGN KEY (id_modulo) REFERENCES modulos(id),
     FOREIGN KEY (id_aluno) REFERENCES alunos(id)
 );

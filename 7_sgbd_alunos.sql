@@ -6,5 +6,6 @@ CREATE TABLE alunos (
     nome VARCHAR(100) NOT NULL,
     n_aluno SMALLINT UNSIGNED NOT NULL,
     PRIMARY KEY (id),
+    CONSTRAINT unique_id_aluno_id_turma UNIQUE (id_aluno, id_turma),
     FOREIGN KEY (id_turma) REFERENCES turmas(id)
 );
