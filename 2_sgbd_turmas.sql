@@ -6,6 +6,11 @@ CREATE TABLE turmas (
     nome VARCHAR(100) NOT NULL,
     ano_inicio VARCHAR(4) NOT NULL,
     PRIMARY KEY (id)
-    ON DELETE RESTRICT
-    ON UPDATE RESTRICT
+    /*ON DELETE RESTRICT
+    ON UPDATE RESTRICT*/
 );
+
+INSERT INTO turmas (
+    nome,
+    ano_inicio
+) VALUES ('Técnico de Gestão e Programação de Sistemas Informáticos', '2021');
