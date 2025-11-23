@@ -222,3 +222,5 @@ INSERT INTO modulos (
 ) VALUES ('1', 'Formação em contexto de trabalho 1', NULL),
        ('2', 'Formação em contexto de trabalho 1', '2.º'),
        ('3', 'Formação em contexto de trabalho 1', '3.º');
+
+       SELECT * FROM modulos;
