@@ -7,3 +7,6 @@ CREATE TABLE instituicao (
     ON DELETE RESTRICT
     ON UPDATE RESTRICT
 );
+
+INSERT INTO instituicao (nome) VALUES 
+('Escola Secundaria José Afonso');

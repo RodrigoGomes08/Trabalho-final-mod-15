@@ -10,3 +10,9 @@ CREATE TABLE cursos (
     ON DELETE RESTRICT
     ON UPDATE RESTRICT
 );
+INSERT INTO cursos (id_instituicao, nome, slug) VALUES 
+(1, 'Curso Profissional de Técnico de Gestão e Programação de Sistemas Informáticos', 'TGPSI'),
+(1, 'Curso Profissional de Técnico de Informática de Gestão', 'TIG'),
+(1, 'Curso Profissional de Técnico de Turismo', 'TT'),
+(1, 'Curso Profissional de Técnico de Proteção Civil', 'TPC'),
+(1, 'Curso Profissional de Técnico de Comunicação, Marketing, Relações Públicas e Publicidade', 'TCMRPP');

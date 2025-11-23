@@ -13,4 +13,4 @@ CREATE TABLE turmas (
 INSERT INTO turmas (
     nome,
     ano_inicio
-) VALUES ('Técnico de Gestão e Programação de Sistemas Informáticos', '2021');
+) VALUES ('TGPSI', '2021');
