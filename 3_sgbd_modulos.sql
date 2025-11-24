@@ -8,8 +8,6 @@ CREATE TABLE modulos (
     nome VARCHAR(255) NOT NULL,
     ano_lecionacao VARCHAR(3),
     PRIMARY KEY (id)
-    /*ON DELETE RESTRICT
-    ON UPDATE RESTRICT*/
 ); 
     /* Insert para a disciplina PT*/
 INSERT INTO modulos (
@@ -222,5 +220,3 @@ INSERT INTO modulos (
 ) VALUES ('1', 'Formação em contexto de trabalho 1', NULL),
        ('2', 'Formação em contexto de trabalho 1', '2.º'),
        ('3', 'Formação em contexto de trabalho 1', '3.º');
-
-       SELECT * FROM modulos;

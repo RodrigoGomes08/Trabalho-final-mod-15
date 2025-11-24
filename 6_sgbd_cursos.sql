@@ -6,8 +6,9 @@ CREATE TABLE cursos (
     nome VARCHAR(100) NOT NULL,
     slug VARCHAR(10) NOT NULL,
     PRIMARY KEY (id),
+    CONSTRAINT unique_nome_slug UNIQUE (nome, slug),
     FOREIGN KEY (id_instituicao) REFERENCES instituicao(id)
-    ON DELETE RESTRICT
+    ON DELETE CASCADE
     ON UPDATE RESTRICT
 );
 INSERT INTO cursos (id_instituicao, nome, slug) VALUES 

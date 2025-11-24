@@ -8,9 +8,13 @@ CREATE TABLE modulo_capitalizados (
     nota BIT(20) NOT NULL,
     PRIMARY KEY (id),
     CONSTRAINT unique_id_modulo_id_aluno UNIQUE (id_modulo, id_aluno),
-    FOREIGN KEY (id_modulo) REFERENCES modulos(id),
+    FOREIGN KEY (id_modulo) REFERENCES modulos(id)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT,
     FOREIGN KEY (id_aluno) REFERENCES alunos(id)
-);
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT
+);  
 
 -- SQL Inserts for modulo_capitalizados
 INSERT INTO modulo_capitalizados (id_modulo, id_aluno, data_capitalizacao, nota) VALUES

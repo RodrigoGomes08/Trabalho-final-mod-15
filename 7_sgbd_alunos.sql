@@ -6,8 +6,10 @@ CREATE TABLE alunos (
     nome VARCHAR(100) NOT NULL,
     n_aluno SMALLINT UNSIGNED NOT NULL,
     PRIMARY KEY (id),
-    CONSTRAINT unique_id_aluno_id_turma UNIQUE (id, id_turma),
+    CONSTRAINT unique_n_aluno_id_turma UNIQUE (n_aluno, id_turma),
     FOREIGN KEY (id_turma) REFERENCES turmas(id)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT
 );
 
 INSERT INTO alunos (id_turma, nome, n_aluno) VALUES 
@@ -31,4 +33,4 @@ INSERT INTO alunos (id_turma, nome, n_aluno) VALUES
 (1, 'Rodrigo Andraz', 19),
 (1, 'Rodrigo Lourenço', 20),
 (1, 'Tiago Semedo', 21),
-(1, 'Marco', 22);
+(1, 'Marco Alves', 22);

@@ -4,10 +4,9 @@ DROP TABLE IF EXISTS disciplinas;
 
 CREATE TABLE disciplinas (
     id INT(11) UNSIGNED AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
+    nome VARCHAR(100) UNIQUE NOT NULL,
     PRIMARY KEY (id)
-    /*ON DELETE RESTRICT
-    ON UPDATE RESTRICT*/
+
 );
 
 INSERT INTO disciplinas (
