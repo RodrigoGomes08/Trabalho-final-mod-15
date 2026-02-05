@@ -6,12 +6,12 @@ CREATE TABLE curso_disciplina_modulos (
     id_disciplina INT(11) UNSIGNED NOT NULL,
     id_modulo INT(11) UNSIGNED NOT NULL,
     id_precedencia INT UNSIGNED,
-    n_hora_sugeridas DECIMAL(5,2) NOT NULL,
-    n_hora_dadas DECIMAL(5,2),
+    n_hora_sugeridas DECIMAL(4,2) NOT NULL,
+    n_hora_dadas DECIMAL(4,2),
     n_ordem TINYINT,
     PRIMARY KEY (id),
     CONSTRAINT unique_id_curso_id_disciplina_id_modulo UNIQUE (id_curso, id_disciplina, id_modulo),
-    Constraint unique_id_curso_id_disciplina_n_ordem UNIQUE (id_curso, id_disciplina, id_modulo, n_ordem),
+    CONSTRAINT unique_id_curso_id_disciplina_n_ordem UNIQUE (id_curso, id_disciplina, id_modulo, n_ordem),
     FOREIGN KEY (id_curso) REFERENCES cursos(id)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT,
@@ -21,7 +21,7 @@ CREATE TABLE curso_disciplina_modulos (
     FOREIGN KEY (id_modulo) REFERENCES modulos(id)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT,
-    FOREIGN KEY (id_precedencia) REFERENCES disciplinas(id)
+    FOREIGN KEY (id_precedencia) REFERENCES curso_disciplina_modulos(id)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT
 );
